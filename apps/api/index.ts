@@ -547,7 +547,8 @@ const app = new Elysia()
     const userOrders = await db
       .select()
       .from(orders)
-      .where(eq(orders.userId, userId));
+      .where(eq(orders.userId, userId))
+      .execute();
     
     return { orders: userOrders };
   })
