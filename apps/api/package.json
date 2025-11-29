@@ -2,6 +2,7 @@
   "name": "api",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "bun run --watch index.ts",
     "start": "bun run index.ts",
@@ -10,6 +11,8 @@
   "dependencies": {
     "elysia": "latest",
     "@elysiajs/cors": "latest",
-    "database": "workspace:*"
+    "database": "workspace:*",
+    "drizzle-orm": "^0.36.4",
+    "postgres": "^3.4.5"
   }
 }
