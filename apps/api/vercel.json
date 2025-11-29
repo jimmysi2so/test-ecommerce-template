@@ -3,7 +3,9 @@
   "bunVersion": "1.x",
   "buildCommand": "bun install",
   "installCommand": "bun install",
+  "devCommand": "bun run --hot api/index.ts",
   "framework": null,
+  "outputDirectory": "api",
   "rewrites": [
     {
       "source": "/(.*)",
