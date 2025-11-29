@@ -5,7 +5,10 @@ import { users, products, carts, cartItems, orders, orderItems, categories } fro
 import { eq, and, asc } from 'drizzle-orm';
 
 const app = new Elysia()
-  .use(cors())
+  .use(cors({
+    origin: process.env.FRONTEND_URL || '*',
+    credentials: true,
+  }))
   
   // ===== RUTAS GENERALES =====
   .get('/', () => ({ message: 'E-commerce API funcionando! 🚀' }))
